@@ -1,5 +1,7 @@
 # shortly
 
+demo : https://shorten-your-url.netlify.app/
+
 ## Project setup
 
 ```
