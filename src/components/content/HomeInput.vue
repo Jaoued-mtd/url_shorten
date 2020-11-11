@@ -135,7 +135,6 @@ export default {
     width: 80%;
   }
   .link-shortened {
-    display: flex;
     flex-direction: column;
   }
   .shorten-bar {
@@ -147,6 +146,9 @@ export default {
   .shorten-input {
     width: 93%;
     margin-bottom: 1.5rem;
+  }
+  .link-text {
+    margin: auto;
   }
 }
 

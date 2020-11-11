@@ -98,6 +98,8 @@ li:not(:first-child) {
 @media screen and (max-width: 700px) {
   .footer-content {
     text-align: center;
+    width: 100%;
+    padding: 0;
   }
   .footer-icons img {
     flex-direction: column;
