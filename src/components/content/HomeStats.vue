@@ -123,7 +123,6 @@
   }
   .stats-grid {
     display: flex;
-
     flex-direction: column;
     align-items: center;
   }
@@ -134,6 +133,15 @@
   }
   .card-icon {
     left: 7.6rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .stats-card {
+    max-height: 25vh;
+  }
+  .stats-header {
+    width: 80%;
   }
 }
 </style>

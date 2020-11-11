@@ -14,7 +14,7 @@
           mode="btn-blue shorten-btn"
         />
       </form>
-      <p class="invalid" v-if="invalid">Please add a link</p>
+      <p class="invalid" v-if="invalid">Please add a link or check it.</p>
     </div>
     <BaseSpinner v-if="isLoading" />
     <div class="shorten-result" v-if="linkResult">
@@ -43,6 +43,7 @@ export default {
   },
   methods: {
     onSubmit() {
+      this.invalid = false;
       this.isLoading = true;
       var requestOptions = {
         method: "POST",
@@ -55,7 +56,10 @@ export default {
           this.linkResult = result.result.full_short_link;
           this.isLoading = false;
         })
-        .catch((error) => console.log("error", error));
+        .catch(() => {
+          this.invalid = true;
+          this.isLoading = false;
+        });
     },
   },
 };
