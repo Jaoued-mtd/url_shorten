@@ -22,11 +22,11 @@
         <p>{{ url }}</p>
       </div>
       <div class="link-shortened">
-        <p class="primary-cyan link-text">
+        <p class="primary-cyan link-text" id="link">
           <span class="shorten-span"> Your shortened url : </span>
           {{ linkResult }}
         </p>
-        <!-- <BaseButton @click="copyUrl" title="Copy" mode="btn-blue shorten-btn" /> -->
+        <BaseButton @click="copyUrl" title="Copy" mode="btn-blue shorten-btn" />
       </div>
     </div>
   </div>
@@ -60,6 +60,19 @@ export default {
           this.invalid = true;
           this.isLoading = false;
         });
+    },
+    copyUrl() {
+      var dummy = document.createElement("input");
+      //dummy.style.display = 'none'
+      document.body.appendChild(dummy);
+      //$(dummy).css('display','none');
+      dummy.setAttribute("id", "dummy_id");
+      //dummy.setAttribute('value', document.URL + '; ' + document.title)
+      dummy.setAttribute("value", this.linkResult); //TEXTX is the value of variable
+      //document.getElementById("dummy_id").value=val;
+      dummy.select();
+      document.execCommand("copy");
+      document.body.removeChild(dummy);
     },
   },
 };
