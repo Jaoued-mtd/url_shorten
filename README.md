@@ -1,5 +1,11 @@
 # shortly
 
+Challenge from frontendmentor.io 
+
+Demo : https://shorten-your-url.netlify.app/
+
+API : shrtcode API -> https://app.shrtco.de/
+
 ## Project setup
 
 ```
