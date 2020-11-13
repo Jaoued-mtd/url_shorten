@@ -78,7 +78,7 @@
   grid-row: 1 / 3;
   position: relative;
   z-index: 2;
-  max-height: 20vh;
+  max-height: 55%;
 }
 .stats-grid-text {
   font-size: 0.9rem;
