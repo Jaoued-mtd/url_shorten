@@ -19,10 +19,6 @@ export default {
   cursor: pointer;
 }
 
-.btn:hover {
-  opacity: 90%;
-}
-
 .link {
   color: hsl(0, 0%, 75%);
   font-weight: 700;
