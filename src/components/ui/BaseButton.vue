@@ -20,7 +20,7 @@ export default {
 }
 
 .btn:hover {
-  opacity: 60%;
+  opacity: 90%;
 }
 
 .link {
